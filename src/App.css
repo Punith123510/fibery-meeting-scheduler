@@ -66,9 +66,7 @@ nav {
   .bg-gray-100 {
     padding: 0; /* Remove padding for the left sidebar on mobile devices */
   }
-  .w-3/4 {
-    width: 100%; /* Make the right content full-width on mobile devices */
-  }
+  
    /* Change flex direction to column for small devices */
   
 
