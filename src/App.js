@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import FiberyDemo from './components/FiberyDemo';
+//import Calendar from './components/Calendar';
+//import HomePage from './components/HomePagr';
+import Pricing from './components/Pricing';
+import './App.css'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen flex flex-col py-10">
+    <Header />
+      <main className="flex-grow container mx-auto ">
+        <div >
+          
+        <Pricing />
+        
+        </div>
+      </main>
+      
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

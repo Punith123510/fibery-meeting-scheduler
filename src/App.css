@@ -1,38 +1,108 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('../public/bgimg.jpg');
+  background-size: cover;
+  /* Center the background image horizontally and vertically */
+  background-position: center center;
+  /* Fix the background image so it doesn't scroll with the content */
+  background-attachment: fixed;
+}
+
+/* Layout styles */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #f0f0f0;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-links {
+  display: flex;
+  gap: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .demo-container,
+  .pricing-container {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1rem;
   }
+}
+
+
+/* styles.css */
+
+/* Styles for mobile devices */
+@media only screen and (max-width: 600px) {
+  .flex {
+    flex-direction: column; /* Change flex direction to column for mobile devices */
+  }
+  .bg-gray-100 {
+    padding: 0; /* Remove padding for the left sidebar on mobile devices */
+  }
+  .w-3/4 {
+    width: 100%; /* Make the right content full-width on mobile devices */
+  }
+   /* Change flex direction to column for small devices */
+  
+
+  .mr-4 {
+    margin-right: 0; /* Remove right margin for small devices */
+  }
+  .mb-2 {
+    margin-bottom: 10px; /* Increase bottom margin for small devices */
+  }
+  .grid-cols-7 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* Change grid columns to one for small devices */
+  }
+  .px-4 {
+    padding-left: 10px; /* Increase left padding for small devices */
+    padding-right: 10px; /* Increase right padding for small devices */
+  }
+}
+
+/* styles.css */
+
+/* Styles for mobile devices */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 20px; /* Add padding to the container for mobile devices */
+  }
+  .flex.items-center {
+    flex-direction: column; /* Change flex direction to column for mobile devices */
+    text-align: center; /* Center align text for mobile devices */
+  }
+  .flex.items-center nav {
+    margin-top: 20px; /* Add margin to the navigation for mobile devices */
+  }
+  .bg-white.shadow.py-4 {
+    padding: 10px 20px; /* Adjust padding for the header for mobile devices */
+  }
+  /* Add more styles as needed */
 }
